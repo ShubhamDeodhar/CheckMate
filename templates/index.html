@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="../static/images/icon.jpg" type="image/jpg" sizes="16x16" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Frank+Ruhl+Libre&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+   <title>Checkmate</title>
+</head>
+<body>
+   <nav class="navbar navbar-expand-sm fixed-top">
+      <div class="container">
+        <a class="navbar-brand mr-auto" 
+          ><h1><i class="fas fa-chess-knight"></i> CheckMate </h1></a>
+      </div>
+    </nav>
+
+    <main>
+       <section id='about'>
+         <div class="row list">
+            <div class="col-12 col-md-6 img">
+              <img
+                src="../static/images/image1.jpg"
+                height="600px"
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-12 col-md-6 funky">
+              <p class="subtitle">Enter your Catch Phrase</p>
+              <p class='description'>In the time when the world has come on the internet for education full time, it's equally important for these platforms to be strongly backed up by technology. One of the major loopholes is plagiarism and copying in online exams. To tackle this issue, we bring to you 'Check Mate'. 
+               With our tool, teachers and professors can get all the pdf documents compared and checked for plagiarism.The web app includes feature like uploading files in pdf formats, comparing a document with the rest of the submissions and gives a comparison score, depicting percentage of content copied. Depending on a threshold comparison score,  an automated email will generated and sent to the respective person's email id with the similarity scores.</p>
+              
+            </div>
+          </div>
+          
+       </section>
+       <div class="row">
+         <div class="col-12 quote">
+           <p>
+             Scroll down to use our App
+           </p>
+          
+         </div>
+       </div>
+       <section id='forms'>
+         <div class="row">
+            <div class="col-12 quote form-quote">
+              <p>
+                Upload your Documents in following Form
+              </p>
+            </div>
+          </div>
+          <div class="row">
+             <div class="col-12 col-sm-6 offset-sm-3">
+               <form>
+                  <div class='form-group' >
+                     <label for="Email"><h4>Email address</h4></label>
+                     <input type="email" class="form-control" id="Email" aria-describedby="emailHelp">
+                     <small id="emailHelp" class="form-text ">We'll send you the results of the plagiarism check to you via email.</small>
+
+
+                  </div> 
+                  <div class='form-group'>
+                     <label for="myfile"><h4>Select a file:</h4></label>
+                     <input type="file" id="myfile" name="myfile">
+                     <small id="emailHelp" class="form-text ">file type sould be .txt</small>
+                  </div>                
+               </form>
+               <div class='form-group'>
+                  <label for="myfile"><h4>Select a file:</h4></label>
+                  <input type="file" id="myfile" name="myfile">
+                  <small id="emailHelp" class="form-text ">file type sould be .txt</small>
+               </div>  
+               <button type="button" class="btn btn-warning">Add another file</button>
+               <button type="submit" class="btn btn-danger">Lets Checkmate!!</button>
+
+             </div>
+          </div>
+       </section>
+       <div class="row buffer">
+         <div class="col-12 quote">
+           <p>
+            <i class="fas fa-exclamation-circle"></i>More number of files, might cost some extra time
+           </p>
+          
+         </div>
+       </div>
+       
+    </main>
+    <footer>
+       <div class='container'>
+          <div class='row'>
+            <div class="col-12 col-md-4 social" style="text-align: center">
+               <img
+                 src="../static/images/dracarys.png"
+                 height="150px"
+                 width="200"
+                 alt="Logo name"
+                 class="img-fluid"
+               />
+             </div>
+             <div class="col-12 col-md-4 social" style="text-align: center">
+               <h4>
+                 Developed by Team Dracarys for OctaHacks 3.0
+               </h4>
+             </div>
+             <div class="col-12 col-md-4 social" style="text-align: center">
+               <a href='https://github.com/ShubhamDeodhar/CheckMate'><h4 >
+                   Check our Repository at <i class="fab fa-github"></i>
+               </h4></a>
+             </div>
+          </div>
+          
+       </div>
+    </footer>
+   <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+
+   </script>
+   <script src="https://kit.fontawesome.com/ee1724f52b.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
