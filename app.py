@@ -27,6 +27,7 @@ def index():
 def upload():
     uploaded_files = request.files.getlist("file[]")
     filenames = []
+    
     for file in uploaded_files:
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
