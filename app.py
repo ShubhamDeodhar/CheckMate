@@ -47,8 +47,8 @@ def upload():
             filenames.append(filename)
     
     ml = ml_model()
-    print(ml)
-    return render_template('upload.html', results=ml)
+    length = len(ml)
+    return render_template('upload.html', results=ml , length = length)
 
 
 
@@ -76,31 +76,23 @@ def ml_model():
     all_files = [x.replace('uploads\\', '') for x in all_files]
 
     final = []
+    count = 0
     for i in range(0 , len(list)):
 
         first  = comparison[i][0] - 1
         second = comparison[i][1] - 1
 
         if list[i] > 0.7:
-            s = " Your score is " + str(list[i]*100) + " % between " + str(all_files[first]) + " and " + str(all_files[second])
+            s = " Your score is {:0.2f}".format((list[i]*100))  + " % between " + str(all_files[first]) + " and " + str(all_files[second])
             final.append(s)
-        #print(" Your score is " , list[i]*100 , "% between " , all_files[first] , "and" , all_files[second] , "pdfs")
+
+            #print("\nYour Celsius value is {:0.2f}ºC.\n".format(answer))
+
+            count +=1 
+        
 
 
     return final
-    #return render_template('index.html')
-
-# This route is expecting a parameter containing the name
-# of a file. Then it will locate that file on the upload
-# directory and show it on the browser, so if the user uploads
-# an image, that image is going to be show after the upload
-#@app.route('/uploads/<filename>')
-#def uploaded_file(filename):
-    #return send_from_directory(app.config['UPLOAD_FOLDER'],
-                              # filename)
-
-
-
 
 if __name__ == '__main__':
     app.run(debug=True)

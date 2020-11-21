@@ -1,31 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
-          rel="stylesheet">
-  </head>
-  <body>
-    <div class="container">
-      <div class="header">
-        <h3 class="text-muted">Uploaded files</h3>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="../static/images/pen.png" type="image/png" sizes="16x16" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Frank+Ruhl+Libre&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/upload.css') }}">
+   <title>Checkmate</title>
+</head>
+<body>
+   <nav class="navbar navbar-expand-sm fixed-top">
+      <div class="container">
+        <a class="navbar-brand mr-auto" 
+          ><h1><i class="fas fa-pen-fancy"></i> CheckMate </h1></a>
       </div>
-      <hr/>
-      <div>
-      This is a list of the files you just uploaded, click on them to load/download them
-      <ul>
-        {% for i in results %}
-          <li>{{i}}</li>
-        {% endfor %}
-      </ul>
-      </div>
-      <div class="header">
-        <h3 class="text-muted">Code to manage a Upload</h3>
-      </div>
-      <hr/>    
-<br>
-{prediction_text}
-</br>
-      </div>
-    </div>
-  </body>
+    </nav>
+
+    <main> 
+      <section id="about"> 
+        <div class="row list">
+            <div class="col-12 col-md-6 img" >
+              <img
+                src="../static/images/undraw_Done_checking_re_6vyx.png"
+                height="600px"
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-12 col-md-6 funky">
+              <p class="subtitle" >We are ready with your results</p>
+              <h1 class="alert alert-warning" role="alert" style = "color: darkred; margin-bottom: 20px;">We have detected total {{length}} possible cases of plagariasms!!</h1>              
+              <h1 style = "color: white; margin-top: 20px;">Scroll down to see the details</h1>
+              
+            </div>
+        </div>
+
+      </section>
+             <section id='forms'>
+         <div class="row">
+            <div class="col-12 quote form-quote">
+              <h1 >
+                Following are the results
+              </h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 forms" style = "color: white;" >
+
+                <ol type = "1">
+                {% for i in results %}
+                <li class="alert alert-warning" role="alert" style = "border-bottom: 2px solid #ccc; color: darkred;"> <h2> {{ i }} </h2></li>
+                {%  endfor %}
+                 </ol>
+                
+              </div>
+
+              </div>
+       </section>
+
+    </main>
+
+
+    <footer>
+       <div class='container'>
+          <div class='row'>
+            <div class="col-12 col-md-4 social" style="text-align: center">
+               <img
+                 src="../static/images/dracarys.png"
+                 height="150px"
+                 width="200"
+                 alt="Logo name"
+                 class="img-fluid"
+               />
+             </div>
+             <div class="col-12 col-md-4 social" style="text-align: center">
+               <h4>
+                 Developed by Team Dracarys for OctaHacks 3.0
+               </h4>
+             </div>
+             <div class="col-12 col-md-4 social" style="text-align: center">
+               <a href='https://github.com/ShubhamDeodhar/CheckMate'><h4 >
+                   Check our Repository at <i class="fab fa-github"></i>
+               </h4></a>
+             </div>
+          </div>
+          
+       </div>
+
+    </footer>
+   <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+   <script src="https://kit.fontawesome.com/ee1724f52b.js" crossorigin="anonymous"></script>
+
+</body>
 </html>
