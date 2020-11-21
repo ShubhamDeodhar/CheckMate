@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
+          rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h3 class="text-muted">Uploaded files</h3>
+      </div>
+      <hr/>
+      <div>
+      This is a list of the files you just uploaded, click on them to load/download them
+      <ul>
+        {% for i in results %}
+          <li>{{i}}</li>
+        {% endfor %}
+      </ul>
+      </div>
+      <div class="header">
+        <h3 class="text-muted">Code to manage a Upload</h3>
+      </div>
+      <hr/>    
+<br>
+{prediction_text}
+</br>
+      </div>
+    </div>
+  </body>
+</html>
