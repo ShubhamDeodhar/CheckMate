@@ -62,7 +62,7 @@
           </div>
           <div class="row">
             <div class="col-12 col-sm-6 forms" >
-               <form method="POST" id='appendForm' enctype="multipart/form-data">
+               <form action="upload" method="POST" id='appendForm' enctype="multipart/form-data">
                   
                   <div class='form-group' >
                      <label for="Email"><h4>Email address</h4></label>
@@ -71,14 +71,11 @@
                   </div> 
                   <div class='form-group'>
                      <label for="myfile"><h4>Select a file:</h4></label>
-                     <input type="file" id="myfile" name="myfiles" class='btn btn-warning' required>
+                     <input type="file" id="myfile" name="file[]" class='btn btn-warning' multiple required>
+                     
                      <small id="emailHelp" class="form-text ">file type sould be .txt</small>
                   </div> 
-                  <div class='form-group'>
-                     <label for="myfiles"><h4>Select a file:</h4></label>
-                     <input type="file" id="myfile" name="myfiles" multiple="true" class='btn btn-warning'>
-                     <small id="emailHelp" class="form-text ">file type sould be .txt, Here you can add multiple files</small>
-                  </div>                
+                             
                
                
                   <div class='row'>
