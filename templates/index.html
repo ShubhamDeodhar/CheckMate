@@ -31,15 +31,14 @@
          <div class="row list">
             <div class="col-12 col-md-6 img" >
               <img
-                src="../static/images/image1.jpg"
+                src="../static/images/undraw_exams_g4ow.png"
                 height="600px"
                 class="img-fluid"
               />
             </div>
             <div class="col-12 col-md-6 funky">
-              <p class="subtitle">Enter your Catch Phrase</p>
-              <p class='description'>In the time when the world has come on the internet for education full time, it's equally important for these platforms to be strongly backed up by technology. One of the major loopholes is plagiarism and copying in online exams. To tackle this issue, we bring to you 'Check Mate'. 
-               With our tool, teachers and professors can get all the pdf documents compared and checked for plagiarism.The web app includes feature like uploading files in pdf formats, comparing a document with the rest of the submissions and gives a comparison score, depicting percentage of content copied. Depending on a threshold comparison score,  an automated email will generated and sent to the respective person's email id with the similarity scores.</p>
+              <p class="subtitle">Think before you cheat!!</p>
+              <p class='description'>A convenient tool for detecting plagiarism and comparing all submissions in one go. Gives the user a calculated score to detect percentage of similarity and an option to send an automated email to the evaluator.</p>
               
             </div>
           </div>
@@ -62,34 +61,45 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-12 col-sm-6 offset-sm-3" >
-               <form id='appendForm'>
+            <div class="col-12 col-sm-6 forms" >
+               <form method="POST" id='appendForm' enctype="multipart/form-data">
+                  
                   <div class='form-group' >
                      <label for="Email"><h4>Email address</h4></label>
-                     <input type="email" class="form-control" id="Email" aria-describedby="emailHelp">
+                     <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" required>
                      <small id="emailHelp" class="form-text ">We'll send you the results of the plagiarism check to you via email.</small>
                   </div> 
                   <div class='form-group'>
                      <label for="myfile"><h4>Select a file:</h4></label>
-                     <input type="file" id="myfile" name="myfile">
+                     <input type="file" id="myfile" name="myfiles" class='btn btn-warning' required>
                      <small id="emailHelp" class="form-text ">file type sould be .txt</small>
+                  </div> 
+                  <div class='form-group'>
+                     <label for="myfiles"><h4>Select a file:</h4></label>
+                     <input type="file" id="myfile" name="myfiles" multiple="true" class='btn btn-warning'>
+                     <small id="emailHelp" class="form-text ">file type sould be .txt, Here you can add multiple files</small>
                   </div>                
-               </form>
-               <div class='form-group'>
-                  <label for="myfile"><h4>Select a file:</h4></label>
-                  <input type="file" id="myfile" name="myfile">
-                  <small id="emailHelp" class="form-text ">file type sould be .txt</small>
-               </div>  
                
-
+               
+                  <div class='row'>
+                     <div class='col-12 col-sm-6 offset-sm-4'>
+                       
+                        <button type="submit" class="btn btn-warning">Lets Checkmate!!</button>
+                     </div>
+                  </div>
+              
+            </div>
+            <div class='col-12 col-sm-6'>
+               <img
+             src="../static/images/undraw_checking_boxes_2ibd.png"
+             height="600px"
+             class="img-fluid"
+             style="opacity: 0.8;"
+           />
             </div>
          </div>
-         <div class='row'>
-            <div class='col-12 col-sm-6 offset-sm-3'>
-               <button type="button" class="btn btn-warning" onclick='append()'>Add another file</button>
-               <button type="submit" class="btn btn-danger">Lets Checkmate!!</button>
-            </div>
-         </div>
+         
+      </form>
        </section>
        <div class="row buffer">
          <div class="col-12 quote">
@@ -138,13 +148,10 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-
-  </script>
+  
 
     <script>
-       function append(){
+       /*function append(){
           var mainDiv=document.createElement('div');
           mainDiv.classList.add('form-group');
           //creating label for input
@@ -179,7 +186,7 @@
           slot=document.getElementById('appendForm');
           slot.appendChild(mainDiv);
  
-       }
+       }*/
    </script>
    <script src="https://kit.fontawesome.com/ee1724f52b.js" crossorigin="anonymous"></script>
 

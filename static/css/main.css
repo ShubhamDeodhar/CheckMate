@@ -57,6 +57,7 @@ nav .container a {
 }
 
 .subtitle {
+  padding-top: 24px;
   font-size: 50px;
   color: White;
   font-family: 'Caveat', cursive;
@@ -64,9 +65,9 @@ nav .container a {
   vertical-align: middle;
 }
 .description {
-  padding: 12px;
+  padding: 24px;
   font-weight: lighter;
-  font-size: 22px;
+  font-size: 30px;
   color: White;
   font-family: 'Caveat', cursive;
   font-family: 'Frank Ruhl Libre', serif;
@@ -83,19 +84,22 @@ nav .container a {
 
 #forms {
   margin-top: 8%;
-  background: #f53b57;
-  opacity: 0.8;
+  opacity: 0.9;
   vertical-align: middle;
   text-align: left;
   position: relative;
-  left: 10%;
-  width: 80%;
+  left: 5%;
+  width: 90%;
   height: auto;
-
-  border-radius: 18px 18px 18px 18px;
-  padding-bottom: 24px;
 }
-
+.forms {
+  background: #f53b57;
+  border-radius: 18px 18px 18px 18px;
+  height: auto;
+  padding: 24px;
+  text-align: left;
+  color: white;
+}
 .form-group {
   border-bottom: 2px solid #cccccc;
 }
