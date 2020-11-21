@@ -90,7 +90,7 @@ nav .container a {
   position: relative;
   left: 10%;
   width: 80%;
-  height: 140%;
+  height: auto;
 
   border-radius: 18px 18px 18px 18px;
   padding-bottom: 24px;

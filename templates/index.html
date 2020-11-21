@@ -9,8 +9,8 @@
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
-    <link rel="icon" href="../static/images/icon.jpg" type="image/jpg" sizes="16x16" />
-
+    <link rel="icon" href="../static/images/pen.png" type="image/png" sizes="16x16" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -22,14 +22,14 @@
    <nav class="navbar navbar-expand-sm fixed-top">
       <div class="container">
         <a class="navbar-brand mr-auto" 
-          ><h1><i class="fas fa-chess-knight"></i> CheckMate </h1></a>
+          ><h1><i class="fas fa-pen-fancy"></i> CheckMate </h1></a>
       </div>
     </nav>
 
     <main>
        <section id='about'>
          <div class="row list">
-            <div class="col-12 col-md-6 img">
+            <div class="col-12 col-md-6 img" >
               <img
                 src="../static/images/image1.jpg"
                 height="600px"
@@ -62,14 +62,12 @@
             </div>
           </div>
           <div class="row">
-             <div class="col-12 col-sm-6 offset-sm-3">
-               <form>
+            <div class="col-12 col-sm-6 offset-sm-3" >
+               <form id='appendForm'>
                   <div class='form-group' >
                      <label for="Email"><h4>Email address</h4></label>
                      <input type="email" class="form-control" id="Email" aria-describedby="emailHelp">
                      <small id="emailHelp" class="form-text ">We'll send you the results of the plagiarism check to you via email.</small>
-
-
                   </div> 
                   <div class='form-group'>
                      <label for="myfile"><h4>Select a file:</h4></label>
@@ -82,11 +80,16 @@
                   <input type="file" id="myfile" name="myfile">
                   <small id="emailHelp" class="form-text ">file type sould be .txt</small>
                </div>  
-               <button type="button" class="btn btn-warning">Add another file</button>
-               <button type="submit" class="btn btn-danger">Lets Checkmate!!</button>
+               
 
-             </div>
-          </div>
+            </div>
+         </div>
+         <div class='row'>
+            <div class='col-12 col-sm-6 offset-sm-3'>
+               <button type="button" class="btn btn-warning" onclick='append()'>Add another file</button>
+               <button type="submit" class="btn btn-danger">Lets Checkmate!!</button>
+            </div>
+         </div>
        </section>
        <div class="row buffer">
          <div class="col-12 quote">
@@ -134,9 +137,49 @@
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+  </script>
 
     <script>
+       function append(){
+          var mainDiv=document.createElement('div');
+          mainDiv.classList.add('form-group');
+          //creating label for input
+          var label=document.createElement('label');
+          var h4=document.createElement('h4');
+          var Ltext=document.createTextNode('Select a file:')
+          h4.appendChild(Ltext);
+          label.appendChild(h4);
+          //Label Created
 
+          //Creating Input
+          var input=document.createElement('input');
+          input.type='file';
+          input.id="myfile";
+          input.name='myfile';
+          //required Input created
+
+          //lets create small warning element
+          var small=document.createElement('small');
+          small.id="emailHelp" ;
+          small.classList.add("form-text");
+          var Smalltext=document.createTextNode('file type sould be .txt');
+          small.appendChild(Smalltext);
+          //small warning done
+
+          //lets put it together
+          mainDiv.appendChild(label);
+          mainDiv.appendChild(input);
+          mainDiv.appendChild(small);
+
+          //append it in proper slot
+          slot=document.getElementById('appendForm');
+          slot.appendChild(mainDiv);
+ 
+       }
    </script>
    <script src="https://kit.fontawesome.com/ee1724f52b.js" crossorigin="anonymous"></script>
 
