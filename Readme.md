@@ -16,8 +16,11 @@ A fully functional end to end pipeline for finding the similarity between scanne
 
 ## Preview of UI
 
-<img src="https://github.com/ShubhamDeodhar/CheckMate/blob/master/Images%20UI/UI_1.jpeg", width = 40%/> &nbsp;
-<img src="https://github.com/ShubhamDeodhar/CheckMate/blob/master/Images%20UI/UI_2.jpeg", width = 40%/> 
+<img src="https://github.com/ShubhamDeodhar/CheckMate/blob/master/Images%20UI/UI_1.jpeg" width = 40%/> &nbsp;&nbsp;
+<img src="https://github.com/ShubhamDeodhar/CheckMate/blob/master/Images%20UI/UI_2.jpeg" width = 40%/> &nbsp;&nbsp; <br><br>
+<img src="https://github.com/ShubhamDeodhar/CheckMate/blob/master/Images%20UI/UI_3.jpeg" width = 40%/> &nbsp;&nbsp;
+<img src="https://github.com/ShubhamDeodhar/CheckMate/blob/master/Images%20UI/UI_4.jpeg" width = 40%/>
+
 
 
 
