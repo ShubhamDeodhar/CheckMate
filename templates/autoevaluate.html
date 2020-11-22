@@ -14,7 +14,7 @@
 
    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Frank+Ruhl+Libre&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/autoevaluate.css') }}">
    <title>Checkmate</title>
 </head>
 <body>
@@ -26,9 +26,9 @@
         <ul class = "navbar-nav ml-auto"> 
           <li class = "nav-item"> 
            
-              <a href = "/autoevaluate"> 
-                 <button class = "btn btn-danger">
-                  <h5> Switch to Auto-Evaluator </h5>
+              <a href = "/"> 
+                 <button class = "btn btn-success">
+                  <h5> Switch to Plagariasm Checker </h5>
                   </button>
               </a>
              
@@ -43,7 +43,7 @@
          <div class="row list">
             <div class="col-12 col-md-6 img" >
               <img
-                src="../static/images/undraw_exams_g4ow.png"
+                src="../static/images/page2illustrations.jpg"
                 height="600px"
                 class="img-fluid"
               />
@@ -74,26 +74,40 @@
           </div>
           <div class="row">
             <div class="col-12 col-sm-6 forms" >
-               <form action="upload" method="POST" id='appendForm' enctype="multipart/form-data">
+               <form action="evaluateUpload" method="POST" id='appendForm' enctype="multipart/form-data">
                   
                   <div class='form-group'>
                      <label for="Email"><h4>Email address</h4></label>
                      <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" required>
                      <small id="emailHelp" class="form-text ">We'll send you the results of the plagiarism check to you via email.</small>
                   </div> 
+
                   <div class='form-group'>
-                     <label for="myfile"><h4>Select a file:</h4></label>
-                     <input type="file" id="myfile" name="file[]" class='btn btn-warning' multiple required>
+                     <label for="myfile"> <h5> Answer Key: </h5> </label>
+                     <input type="file" id="myfile" name="file[]" class='btn btn-secondary' required>
                      
-                     <small id="emailHelp" class="form-text ">file type sould be .txt</small>
+                     <small id="emailHelp" class="form-text ">File type should be .PDF</small>
                   </div> 
-                             
+                    <div class='form-group'>
+                     <label for="myfile"> <h5>Answer Sheets: </h5> </label>
+                     <input type="file" id="myfile" name="file[]" class='btn btn-secondary' multiple required>
+                     
+                     <small id="emailHelp" class="form-text ">File type should be .PDF</small>
+                  </div>
+
+                  <div class='form-group'>
+                     <label for="myfile"> <h5>Marks Per Question: </h5> </label>
+                     <input type="number" id="myfile" name="marks" class='btn btn-light' required min = 2 max = 100>
+                     
+                     <small id="emailHelp" class="form-text ">File type should be .PDF</small>
+                  </div>
+
                
                
                   <div class='row'>
                      <div class='col-12 col-sm-6 offset-sm-4'>
                        
-                        <button type="submit" class="btn btn-warning">Lets Checkmate!!</button>
+                        <button type="submit" class="btn btn-secondary">Lets Checkmate!!</button>
                      </div>
                   </div>
               
@@ -157,46 +171,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  
-
-    <script>
-       /*function append(){
-          var mainDiv=document.createElement('div');
-          mainDiv.classList.add('form-group');
-          //creating label for input
-          var label=document.createElement('label');
-          var h4=document.createElement('h4');
-          var Ltext=document.createTextNode('Select a file:')
-          h4.appendChild(Ltext);
-          label.appendChild(h4);
-          //Label Created
-
-          //Creating Input
-          var input=document.createElement('input');
-          input.type='file';
-          input.id="myfile";
-          input.name='myfile';
-          //required Input created
-
-          //lets create small warning element
-          var small=document.createElement('small');
-          small.id="emailHelp" ;
-          small.classList.add("form-text");
-          var Smalltext=document.createTextNode('file type sould be .txt');
-          small.appendChild(Smalltext);
-          //small warning done
-
-          //lets put it together
-          mainDiv.appendChild(label);
-          mainDiv.appendChild(input);
-          mainDiv.appendChild(small);
-
-          //append it in proper slot
-          slot=document.getElementById('appendForm');
-          slot.appendChild(mainDiv);
- 
-       }*/
-   </script>
    <script src="https://kit.fontawesome.com/ee1724f52b.js" crossorigin="anonymous"></script>
 
 </body>

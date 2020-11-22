@@ -1,5 +1,8 @@
-numpy==1.19.3
+WTForms==2.3.3
+Flask_WTF==0.14.3
+Werkzeug==0.16.0
 pdfplumber==0.5.24
+Flask_Uploads==0.2.1
+numpy==1.19.3
 Flask==1.1.2
-Werkzeug==1.0.1
 scikit_learn==0.23.2
