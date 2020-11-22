@@ -14,6 +14,13 @@ With our tool, teachers and professors can get all the pdf documents compared an
 
 A fully functional end to end pipeline for finding the similarity between scanned handwritten documents. The web app comes with feature like uploading files in pdf formats, checking the similarity score between the documents and if the person caught in copying other stuff an automated email will generated and sent to the respective peoples email id's with the similarity scores
 
+## Preview of UI
+
+<img src="https://github.com/ShubhamDeodhar/CheckMate/blob/master/Images%20UI/UI_1.jpeg", width = 40%/> &nbsp;
+<img src="https://github.com/ShubhamDeodhar/CheckMate/blob/master/Images%20UI/UI_2.jpeg", width = 40%/> 
+
+
+
 ## Why NLP?
 
 We used the tf-idf and Bag of words techniques of NLP to check the similarity between the files, by tokenizing each sentence and creating the score.
@@ -52,3 +59,4 @@ Developing an application to compare the submission with a reference omr file an
 Making an extension of the app to be implemented on Google Classroom submissions.
 4. Open sourcing the project:
 To deploy the app and make it available for public use!
+
