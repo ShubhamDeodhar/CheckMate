@@ -3,7 +3,7 @@
 <img src="https://github.com/ShubhamDeodhar/CheckMate/blob/master/image.jpg" width=20%/>
 
 
-<h2 align="center">Team Dracrays</h2>
+<h2 align="center">Team Dracarys</h2>
 
 ## Problem Statement
 
@@ -52,7 +52,7 @@ We return the similarity score of every pair of files.
 3. User Interface: We created a minimalistic designed frontend and displayed our results by a flask web-app.
 We generate an automated email containing the similarity score( if only it's above a threshold value).
 
-## Future Prospeccts:
+## Future Prospects:
 
 1. Handwritten docs input:
 Building a model to perform plagiarism for handwritten and scanned documents. 
