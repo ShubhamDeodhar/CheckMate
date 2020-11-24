@@ -63,3 +63,47 @@ Making an extension of the app to be implemented on Google Classroom submissions
 4. Open sourcing the project:
 To deploy the app and make it available for public use!
 
+
+## How to Use
+
+To run it on your local machine do the following using your command line
+
+ * Clone the repository in your local machine 
+ 
+ ```
+ git clone https://github.com/ShubhamDeodhar/CheckMate.git
+ ```
+ 
+ * Change the directory
+ ```
+ cd YOUR-PATH\CheckMate
+ ```
+ 
+ * If you don't have virtual environment library installed , do the following
+ ```
+ pip install virtualenv
+ ```
+ 
+ * Create a new virtual environment for the directory and activate it
+ ```
+ py -m venv env
+ 
+ .\env\Scripts\activate
+ ```
+ 
+ * Install requirements.txt file using pip
+ ```
+ pip install -r requirements.txt
+ ```
+ 
+ * Run Flask
+ ```
+ python app.py
+ ```
+ 
+ * Copy the localhost link and paste it in your browser & voila!
+ 
+ #### Note
+ 
+ You would need to delete the files uploaded from ``` answersheets ``` and ``` uploads ``` each time you run our app
+ 
