@@ -58,6 +58,17 @@ def upload():
     
     ml = ml_model()
     length = len(ml)
+
+    path = r'uploads' 
+    all_files_to_delete = glob.glob(path + "/*.pdf")
+    all_files_to_delete = [x.replace('uploads\\', '') for x in all_files_to_delete]
+
+    for files in all_files_to_delete:
+
+        os.remove(os.path.join(app.config['UPLOAD_FOLDER'], files))
+
+    print(all_files_to_delete)
+
     return render_template('upload.html', results=ml , length = length)
 
 @app.route('/autoevaluate')
@@ -224,6 +235,13 @@ def evaluateupload():
 
     print(marks_list)
 
+    path = r'answersheets' 
+    all_files_to_delete = glob.glob(path + "/*.pdf")
+    all_files_to_delete = [x.replace('answersheets\\', '') for x in all_files_to_delete]
+
+    for files in all_files_to_delete:
+
+        os.remove(os.path.join(app.config['UPLOAD_FOLDER'], files))
 
     return render_template('result.html',marks_list = marks_list ,
                                          total = total,
